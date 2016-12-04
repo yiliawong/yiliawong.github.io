@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  .container {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    #scene {
+      ul, li {
+        width: 100%;
+        height: 100%;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .shadow {
+      position: absolute;
+      z-index: 1000;
+      width: 600px;
+      height: 600px;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      border-radius: 50%;
+      background-color: rgb(1,1,1);
+
+      .center {
+        position: absolute;
+        z-index: 2000;
+        width: 220px;
+        height: 220px;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        border-radius: 50%;
+        background-color: rgb(22, 22, 22);
+      }
+
+      .slides {
+        position: absolute;
+        overflow: hidden;
+        z-index: 1001;
+        width: 552px;
+        height: 552px;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        border-radius: 50%;
+        background-color: rgb(25, 25, 27);
+
+        .anchor {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          width: 50%;
+          height: 20px;
+          transform-origin: 100% 50%;
+          .circle {
+            position: absolute;
+            z-index: 1003;
+            left: 30px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background-color: #ffffff;
+            &:hover {
+              transition: all .4s;
+              background-color: inherit;
+              box-shadow: 0 0 0 3px #fff;
+            }
+          }
+          &.anchor1 {transform: rotate(15deg)}
+          &.anchor2 {transform: rotate(45deg)}
+          &.anchor3 {transform: rotate(75deg)}
+          &.anchor4 {transform: rotate(105deg)}
+          &.anchor5 {transform: rotate(135deg)}
+          &.anchor6 {transform: rotate(165deg)}
+          &.anchor7 {transform: rotate(195deg)}
+          &.anchor8 {transform: rotate(225deg)}
+          &.anchor9 {transform: rotate(255deg)}
+          &.anchor10 {transform: rotate(285deg)}
+          &.anchor11 {transform: rotate(315deg)}
+          &.anchor12 {transform: rotate(345deg)}
+        }
+
+        //.slide {
+        //  position: absolute;
+        //  width: 276px;
+        //  height: 276px;
+        //  background-color: red;//rgb(25, 25, 27);
+        //  transform-origin: 100% 100%;
+        //  &.slide1 {transform: skew(60deg);}
+        //  &.slide2 {transform: rotate(30deg) skew(60deg);}
+        //  &.slide3 {transform: rotate(60deg) skew(60deg);}
+        //  &.slide4 {transform: rotate(90deg) skew(60deg);}
+        //  &.slide5 {transform: rotate(120deg) skew(60deg);}
+        //  &.slide6 {transform: rotate(150deg) skew(60deg);}
+        //  &.slide7 {transform: rotate(180deg) skew(60deg);}
+        //  &.slide8 {transform: rotate(210deg) skew(60deg);}
+        //  &.slide9 {transform: rotate(240deg) skew(60deg);}
+        //  &.slide10 {transform: rotate(270deg) skew(60deg);}
+        //  &.slide11 {transform: rotate(300deg) skew(60deg);}
+        //  &.slide12 {transform: rotate(330deg) skew(60deg);}
+        //}
+      }
+    }
+
+  }
+
+
+  .star0 {
+    width: 1px;
+    height: 1px;
+    opacity: 1;
+    position: absolute;
+    background-color: #ffffff;
+  }
+  .star1 {
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    opacity: 1;
+    position: absolute;
+    background-color: #ffffff;
+  }
+  .star2 {
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    opacity: 1;
+    position: absolute;
+    background-color: #ffffff;
+  }
+}
+
+@keyframes flash {
+  from {opacity: 0.2; box-shadow: none;}
+  50% {opacity: 1; box-shadow: 0 0 1px 1px #ffffff;}
+  to {opacity: 0.2; box-shadow: none;}
+}
